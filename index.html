@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="library.js"></script>
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-4">Search for a product…</h1>
+      <div class="form-group">
+        <label for="id-input">Find a product by its ID</label>
+        <div class="input-group">
+          <input id="id-input" type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" id="id-input-button">Search by Product ID</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="type-input">Find products by type</label>
+        <div class="input-group">
+          <input id="type-input" type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" id="type-input-button">Search by Type</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="price-input">Find products by price</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input id="price-input" type="number" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" id="price-input-button">Search by Price</button>
+          </span>
+        </div>
+        <small class="form-text text-muted">All products within $50 will be found</small>
+      </div>
+
+      <hr class="my-5" />
+
+      <div>
+        <h2 class="display-4">Examined Product</h2>
+        <p id="productText">Product Id: <br>Price: <br>Type: </p>
+
+        <h3>Similar Products</h3>
+        <table id="similarTable" class="table">
+          <tr>
+            <th>Product Id</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Examine</th>
+          </tr>
+        </table>
+      </div>
+
+      <hr class="my-5" />
+
+      <div>
+        <h2>All Products</h2>
+        <table id="allTable" class="table">
+          <tr>
+            <th>Product Id</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Examine</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="productCatalog.js"></script>
+  </body>
+</html>
